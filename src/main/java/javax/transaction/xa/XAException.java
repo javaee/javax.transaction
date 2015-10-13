@@ -1,7 +1,7 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright (c) 1997-2013 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1997-2015 Oracle and/or its affiliates. All rights reserved.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common Development
@@ -46,6 +46,11 @@ package javax.transaction.xa;
  * transaction.
  */
 public class XAException extends java.lang.Exception {
+
+    /**
+     * Specify serialVersionUID for backward compatibility
+     */
+    private static final long serialVersionUID = -8249683284832867751L;
 
     /**
     * The error code with which to create the SystemException.

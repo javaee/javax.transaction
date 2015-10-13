@@ -1,7 +1,7 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright (c) 1997-2013 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1997-2015 Oracle and/or its affiliates. All rights reserved.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common Development
@@ -46,7 +46,13 @@ package javax.transaction;
  */
 public class TransactionRequiredException extends java.rmi.RemoteException 
 {
-	public TransactionRequiredException()
+	    
+    /**
+     * Specify serialVersionUID for backward compatibility
+     */
+    private static final long serialVersionUID = -1898806419937446439L;
+
+        public TransactionRequiredException()
 	{
 		super();
 	}
