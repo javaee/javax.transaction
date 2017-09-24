@@ -194,9 +194,17 @@
                 <configuration>
                     <archive>
                         <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+			<manifestEntries>
+			    <!-- for JDK 9 -->
+			    <Automatic-Module-Name>
+				java.transaction
+			    </Automatic-Module-Name>
+			</manifestEntries>
                     </archive>
                     <excludes>
                         <exclude>**/*.java</exclude>
+                         <exclude>**/javax/transaction/xa</exclude>
+                         <exclude>**/javax/transaction/xa/*.*</exclude>
                     </excludes>
                 </configuration>
             </plugin>
@@ -282,6 +290,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
+		 <version>2.5.3</version>
                 <configuration>
                     <mavenExecutorId>forked-path</mavenExecutorId>
                     <useReleaseProfile>false</useReleaseProfile>
